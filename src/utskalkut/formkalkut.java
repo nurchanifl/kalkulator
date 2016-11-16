@@ -5,17 +5,24 @@
  */
 package utskalkut;
 
+import javax.swing.JTextField;
+
 /**
  *
  * @author siput_000
  */
-public class formkalkut extends javax.swing.JFrame {
-
+public class formkalkut extends javax.swing.JDialog {
+private String tmp = "";
+    private int pilih;
+    private float a1,a2,hasil;
     /**
      * Creates new form formkalkut
      */
-    public formkalkut() {
+    public formkalkut(java.awt.Frame parent, boolean modal) {
+        super(parent, "KALKULATOR");
         initComponents();
+        setLocationRelativeTo(null);
+        txtkalkut.setHorizontalAlignment(JTextField.CENTER);
     }
 
     /**
@@ -56,10 +63,25 @@ public class formkalkut extends javax.swing.JFrame {
         });
 
         btn1.setText("1");
+        btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn1ActionPerformed(evt);
+            }
+        });
 
         btn2.setText("2");
+        btn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn2ActionPerformed(evt);
+            }
+        });
 
         btn3.setText("3");
+        btn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn3ActionPerformed(evt);
+            }
+        });
 
         btn4.setText("4");
 
@@ -185,6 +207,21 @@ public class formkalkut extends javax.swing.JFrame {
     private void txtkalkutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtkalkutActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtkalkutActionPerformed
+
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+         tmp += "1";
+        txtkalkut.setText(tmp);
+    }//GEN-LAST:event_btn1ActionPerformed
+
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+         tmp += "2";
+        txtkalkut.setText(tmp);
+    }//GEN-LAST:event_btn2ActionPerformed
+
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+         tmp += "3";
+        txtkalkut.setText(tmp);
+    }//GEN-LAST:event_btn3ActionPerformed
 
     /**
      * @param args the command line arguments
