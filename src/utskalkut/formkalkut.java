@@ -175,8 +175,18 @@ private String tmp = "";
         });
 
         btnkali.setText("*");
+        btnkali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnkaliActionPerformed(evt);
+            }
+        });
 
         btnbagi.setText("/");
+        btnbagi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbagiActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -329,35 +339,28 @@ private String tmp = "";
     }//GEN-LAST:event_btnkomaActionPerformed
 
     private void btnCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCActionPerformed
-        tmp = "";
-        a1=0;
-        a2=0;
-        hasil=0;
-        txtkalkut.setText("");
+        
     }//GEN-LAST:event_btnCActionPerformed
 
     private void btnminplusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnminplusActionPerformed
-        if (hasil == 0) {
-            JOptionPane.showMessageDialog(this, "Maaf hasil belum ada oprasi aritmatik yang terjadi");
-        } else {
-            hasil *= -1;
-            txtkalkut.setText(String.valueOf(hasil));
-        }
+        
     }//GEN-LAST:event_btnminplusActionPerformed
 
     private void btntambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntambahActionPerformed
-         a1 = Float.valueOf(tmp);
-        pilih = 1;
-        tmp = "";
-        txtkalkut.setText("+");
+         
     }//GEN-LAST:event_btntambahActionPerformed
 
     private void btnkurangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnkurangActionPerformed
-         a1 = Float.valueOf(tmp);
-        pilih = 2;
-        tmp = "";
-        txtkalkut.setText("-");
+         
     }//GEN-LAST:event_btnkurangActionPerformed
+
+    private void btnkaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnkaliActionPerformed
+        
+    }//GEN-LAST:event_btnkaliActionPerformed
+
+    private void btnbagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbagiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnbagiActionPerformed
 
     /**
      * @param args the command line arguments
