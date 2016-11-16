@@ -5,22 +5,23 @@
  */
 package utskalkut;
 
-import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+
+
 
 /**
  *
  * @author siput_000
  */
 public class formkalkut extends javax.swing.JDialog {
-private String tmp = "";
+ private String tmp = "";
     private int pilih;
     private float a1,a2,hasil;
     /**
      * Creates new form formkalkut
      */
     public formkalkut(java.awt.Frame parent, boolean modal) {
-        super(parent, "KALKULATOR");
+         super(parent, "KALKULATOR");
         initComponents();
         setLocationRelativeTo(null);
         txtkalkut.setHorizontalAlignment(JTextField.CENTER);
@@ -339,7 +340,11 @@ private String tmp = "";
     }//GEN-LAST:event_btnkomaActionPerformed
 
     private void btnCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCActionPerformed
-        
+        tmp = "";
+        a1=0;
+        a2=0;
+        hasil=0;
+        txtkalkut.setText("");
     }//GEN-LAST:event_btnCActionPerformed
 
     private void btnminplusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnminplusActionPerformed
@@ -347,7 +352,10 @@ private String tmp = "";
     }//GEN-LAST:event_btnminplusActionPerformed
 
     private void btntambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntambahActionPerformed
-         
+          a1 = Float.valueOf(tmp);
+        pilih = 1;
+        tmp = "";
+        txtkalkut.setText("+");
     }//GEN-LAST:event_btntambahActionPerformed
 
     private void btnkurangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnkurangActionPerformed
