@@ -5,6 +5,7 @@
  */
 package utskalkut;
 
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 
@@ -348,7 +349,12 @@ public class formkalkut extends javax.swing.JDialog {
     }//GEN-LAST:event_btnCActionPerformed
 
     private void btnminplusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnminplusActionPerformed
-        
+        if (hasil == 0) {
+            JOptionPane.showMessageDialog(this, "Maaf hasil belum ada oprasi aritmatik yang terjadi");
+        } else {
+            hasil *= -1;
+            txtkalkut.setText(String.valueOf(hasil));
+        }
     }//GEN-LAST:event_btnminplusActionPerformed
 
     private void btntambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntambahActionPerformed
