@@ -250,11 +250,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="+"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btntambahActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnkurang">
       <Properties>
         <Property name="text" type="java.lang.String" value="-"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnkurangActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnkali">
       <Properties>

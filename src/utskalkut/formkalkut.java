@@ -161,8 +161,18 @@ private String tmp = "";
         btnsamadg.setText("=");
 
         btntambah.setText("+");
+        btntambah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btntambahActionPerformed(evt);
+            }
+        });
 
         btnkurang.setText("-");
+        btnkurang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnkurangActionPerformed(evt);
+            }
+        });
 
         btnkali.setText("*");
 
@@ -334,6 +344,20 @@ private String tmp = "";
             txtkalkut.setText(String.valueOf(hasil));
         }
     }//GEN-LAST:event_btnminplusActionPerformed
+
+    private void btntambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntambahActionPerformed
+         a1 = Float.valueOf(tmp);
+        pilih = 1;
+        tmp = "";
+        txtkalkut.setText("+");
+    }//GEN-LAST:event_btntambahActionPerformed
+
+    private void btnkurangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnkurangActionPerformed
+         a1 = Float.valueOf(tmp);
+        pilih = 2;
+        tmp = "";
+        txtkalkut.setText("-");
+    }//GEN-LAST:event_btnkurangActionPerformed
 
     /**
      * @param args the command line arguments
