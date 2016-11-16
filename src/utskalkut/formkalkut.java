@@ -5,6 +5,7 @@
  */
 package utskalkut;
 
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -151,6 +152,11 @@ private String tmp = "";
         });
 
         btnminplus.setText("+/-");
+        btnminplus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnminplusActionPerformed(evt);
+            }
+        });
 
         btnsamadg.setText("=");
 
@@ -319,6 +325,15 @@ private String tmp = "";
         hasil=0;
         txtkalkut.setText("");
     }//GEN-LAST:event_btnCActionPerformed
+
+    private void btnminplusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnminplusActionPerformed
+        if (hasil == 0) {
+            JOptionPane.showMessageDialog(this, "Maaf hasil belum ada oprasi aritmatik yang terjadi");
+        } else {
+            hasil *= -1;
+            txtkalkut.setText(String.valueOf(hasil));
+        }
+    }//GEN-LAST:event_btnminplusActionPerformed
 
     /**
      * @param args the command line arguments
