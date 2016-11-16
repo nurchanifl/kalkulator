@@ -144,6 +144,11 @@ private String tmp = "";
         });
 
         btnC.setText("C");
+        btnC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCActionPerformed(evt);
+            }
+        });
 
         btnminplus.setText("+/-");
 
@@ -306,6 +311,14 @@ private String tmp = "";
         tmp += ".";
         txtkalkut.setText(tmp);
     }//GEN-LAST:event_btnkomaActionPerformed
+
+    private void btnCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCActionPerformed
+        tmp = "";
+        a1=0;
+        a2=0;
+        hasil=0;
+        txtkalkut.setText("");
+    }//GEN-LAST:event_btnCActionPerformed
 
     /**
      * @param args the command line arguments
